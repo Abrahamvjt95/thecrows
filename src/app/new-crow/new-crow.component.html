@@ -1,0 +1,11 @@
+<div class="container mb-3">
+    <form (ngSubmit)="onSubmit($event)">
+        <div class="input-group mb-6">
+            <input [(ngModel)]="newMessage" name="message" class="form-control" placeholder="tell your thoughts in no more than 130 characters" maxlength="130">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" [disabled]="isParchmentEmpty" [ngClass]="isParchmentEmpty ? 'bg-gray-300 hover:bg-gray-300' : 'bg-blue-400 hover:bg-blue-500 '" type="submit">Send</button>
+            </div>
+          </div>
+    </form>
+</div>
+<app-all-parchment [mail]="allMessages.reverse()"></app-all-parchment>

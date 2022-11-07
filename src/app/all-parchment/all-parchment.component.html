@@ -1,0 +1,29 @@
+<div class="container mb-3" *ngFor="let parch of allMessages">
+    <div class="card text-center">
+        <div class="card-body">
+          <button (click)="showModal(parch)" type="button" class="btn btn-danger d-flex flex-row-reverse bd-highlight" data-toggle="modal" data-target="#exampleModal"><i class="bi bi-trash"></i></button>
+          <h5 class="card-title">{{parch.message}}</h5>
+        </div>
+        <div class="card-footer text-muted">
+            {{parch.date | dateAgo}}
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Comfirm</h5>
+      </div>
+      <div class="modal-body">
+         Are you sure you want to delete this post? 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="hideModal()">No</button>
+        <button type="button" class="btn btn-primary" (click)="deletePost()">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
