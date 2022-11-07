@@ -1,5 +1,7 @@
 # Thecrows
 
+Project made with angular and Bootstrap 5 , the data is saved in localstorage
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
 
 ## Development server
